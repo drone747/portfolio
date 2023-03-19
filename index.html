@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="banner">
+        <header>
+            <a href="#" class="logo"><span>My</span>Portfolio_</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <h3>Hey_</h3>
+            <h2>I am <span id="text"></span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia maiores placeat asperiores necessitatibus nesciunt sequi, non voluptate facere magni? Laborum.</p>
+            <button class="vid">Video call</button>
+            <button class="chat"><ion-icon name="chatbubbles-outline"></ion-icon>Let's chat</button>
+        </div>
+        <img src="colors.png" class="colors">
+        <img src="andy12.png" class="man">
+        <ul class="sci">
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-skype"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <div class="DayNight">
+            <ion-icon name="moon-outline"></ion-icon>
+            <ion-icon name="sunny-outline"></ion-icon>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script>
+        let typingText = new Typed("#text", {
+            strings : ["Andy","Coder","Designer","engineer"],
+            loop : true,
+            typeSpeed : 100,
+            backSpeed : 50,
+            backDelay : 1000
+        })
+
+        let banner = document.querySelector('.banner');
+        let daynight = document.querySelector('.DayNight');
+        daynight.onclick = function(){
+            banner.classList.toggle('night')
+        }
+    </script>
+</body>
+</html>
